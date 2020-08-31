@@ -37,7 +37,7 @@ function addTwoToArray(arr) {
 	const finalArr = [];
 
 	for (let num of arr) {
-		finalArr.push(num + 2);
+		finalArr.push(addTwo(num));
 	}
 
 	return finalArr;
@@ -56,7 +56,7 @@ function addThreeToArray(arr) {
 	const finalArr = [];
 
 	for (let num of arr) {
-		finalArr.push(num + 3);
+		finalArr.push(addThree(num));
 	}
 
 	return finalArr;
@@ -75,7 +75,7 @@ function addFiveToArray(arr) {
 	const finalArr = [];
 
 	for (let num of arr) {
-		finalArr.push(num + 5);
+		finalArr.push(addFive(num));
 	}
 
 	return finalArr;
