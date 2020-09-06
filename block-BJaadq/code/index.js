@@ -10,11 +10,8 @@ function countAllPeople() {
 
 function peopleByHouses() {
 	const peopleByHousesObj = {};
-	let count = 0;
 	got.houses.forEach((e) => {
-		e.people.forEach((ele) => count++);
-		peopleByHousesObj[e.name] = count;
-		count = 0;
+		peopleByHousesObj[e.name] = e.people.length;
 	});
 	return peopleByHousesObj;
 }
@@ -24,11 +21,11 @@ function everyone() {
 }
 
 function nameWithS() {
-	return everyone().filter((e) => e.startsWith("S"));
+	return everyone().filter((e) => e.includes("S") || e.includes("s"));
 }
 
 function nameWithA() {
-	return everyone().filter((e) => e.startsWith("A"));
+	return everyone().filter((e) => e.includes("A") || e.includes("a"));
 }
 
 function surnameWithS() {
@@ -62,11 +59,11 @@ console.log(everyone());
 
 console.log(nameWithS(), "with s");
 // Output should be
-//  ["Sansa Stark", "Stannis Baratheon"] "with s"
+// ["Eddard "Ned" Stark", "Benjen Stark", "Robb Stark", "Sansa Stark", "Arya Stark", "Brandon "Bran" Stark", "Rickon Stark", "Jon Snow", "Tywin Lannister", "Tyrion Lannister", "Jaime Lannister", "Queen Cersei (Lannister) Baratheon", "Stannis Baratheon", "Daenerys Targaryen", "Viserys Targaryen", "Loras Tyrell", "Catelyn (Tully) Stark", "Lysa (Tully) Arryn"]
 
 console.log(nameWithA());
 // Output should be
-// ["Arya Stark"]
+// ["Eddard Stark", "Benjen Stark", "Robb Stark", "Sansa Stark", "Arya Stark", "Brandon Stark", "Rickon Stark", "Tywin Lannister", "Tyrion Lannister", "Jaime Lannister", "Cersei Baratheon", "Robert Baratheon", "Stannis Baratheon", "Renly Baratheon", "Joffrey Baratheon", "Tommen Baratheon", "Myrcella Baratheon", "Daenerys Targaryen", "Viserys Targaryen", "Balon Greyjoy", "Yara Greyjoy", "Margaery Baratheon", "Loras Tyrell", "Catelyn Stark", "Lysa Arryn", "Olenna Tyrell", "Walder Frey", "Jon Arryn", "Khal Drogo"]
 
 console.log(surnameWithS(), "surname with s");
 // Output should be
