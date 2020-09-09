@@ -3,6 +3,8 @@ For the given code below you have to draw the diagram of how these things are wo
 - Keep the images in the `img` folder
 - using the `![](./img/imagename.png)` add images below each code snippet
 
+> [PDF of Method-Visulition](./img/methods-visualition.pdf)
+
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function double(num) {
@@ -10,8 +12,6 @@ function double(num) {
 }
 let doubleNum = numbers.forEach(double);
 ```
-![](./img/main.png)
-
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -28,6 +28,8 @@ function double(num) {
 }
 let doubleNum = numbers.forEach(double);
 ```
+
+![forEach Method](./img/image-3.jpg)
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -61,6 +63,8 @@ function addTwo(num) {
 let doubleNumbers = numbers.map(addTwo);
 ```
 
+![forEach Method](./img/image-1.jpg)
+
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function isOdd(num) {
@@ -85,6 +89,8 @@ function test(num) {
 let filteredNumbers = numbers.filter(test);
 ```
 
+![forEach Method](./img/image-4.jpg)
+
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function add(accumulator, currentValue) {
@@ -100,3 +106,5 @@ function add(accumulator, currentValue) {
 }
 let sum = numbers.reduce(add);
 ```
+
+![forEach Method](./img/image-2.jpg)
